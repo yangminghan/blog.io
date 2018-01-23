@@ -6,8 +6,8 @@ categories: blog
 tags: [测试1,测试2]
 description: 文章金句。
 ---
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 # 这是一级标题
 ## 这个是二级标题
 ### 这个是三级标题
@@ -27,6 +27,11 @@ x_{21} & x_{22} & \ldots \\
 \vdots & \vdots & \ldots \\
 \end{array} \right)
 $$
+
+$$ 
+
+$$
+
 
 
 ```python
