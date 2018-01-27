@@ -241,7 +241,7 @@ plt.show()
 ```
 
 
-![Image](output_27_0.png)
+![Image]({{ site.baseurl }}/output_8_0.png)
 
  # 根据花瓣的长宽绘图 
 
