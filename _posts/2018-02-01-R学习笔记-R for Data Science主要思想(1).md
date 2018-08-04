@@ -27,6 +27,7 @@ description:
     library(tidyverse)  
     height <- read_csv("data/height.csv")  
     write_csv(challenge,"challenge.csv")  
+
 &emsp;&emsp;readr数据导入的速度很快，而且提供了读条的功能，这对于一些比较大的数据包是非常方便的。  
 &emsp;&emsp;readr一般是从我们的文件中读入数据，和它一样，而且功能可能更强大，适用于更大数据量的包是data.table,这个包的功能我也是见识过的，一般处理的数据量的大小在几个G的规模，使用data.table就十分方便了。当我们的数据为其他格式的文件的时候：  
 &emsp;&emsp;**haven** 可以读取SPSS，Stata, SAS数据；  
