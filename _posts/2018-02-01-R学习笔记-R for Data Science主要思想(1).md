@@ -15,8 +15,7 @@ description:
 &emsp;&emsp;目前这本书没有中文版，不过Hadly直接明了的写作风格使得这本书读起来没有任何的负担。而且，他还提供了免费的[网页版本](http://r4ds.had.co.nz/introduction.html)供大家阅读。  
 &emsp;&emsp;这本书中，Hadley提出了提出了一种数据科学的一种模式，即：  
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**Import->Tidy->Transform->Visualize->Model->Communicate**  
-&emsp;&emsp;&emsp;&emsp;**Program**
+![image](http://r4ds.had.co.nz/diagrams/data-science.png)
 
 
 &emsp;&emsp;其中，Transform,Visualize,Model部分为不断循环的一个过程，直到输出满意的结果。Program是贯穿整个数据科学任务中的一个模块。  
@@ -25,9 +24,9 @@ description:
 ## **Import**  
 &emsp;&emsp;将数据导入是所有数据科学任务的第一步。Tidyverse中集成的Import包是readr。readr这个包的语法和基础包中的import基本一样。
 ```R
-library(tidyverse)
-height <- read_csv("data/height.csv")
-write_csv(challenge,"challenge.csv")
+library(tidyverse)  
+height <- read_csv("data/height.csv")  
+write_csv(challenge,"challenge.csv")  
 ```
 &emsp;&emsp;readr数据导入的速度很快，而且提供了读条的功能，这对于一些比较大的数据包是非常方便的。  
 &emsp;&emsp;readr一般是从我们的文件中读入数据，和它一样，而且功能可能更强大，适用于更大数据量的包是data.table,这个包的功能我也是见识过的，一般处理的数据量的大小在几个G的规模，使用data.table就十分方便了。当我们的数据为其他格式的文件的时候：  
