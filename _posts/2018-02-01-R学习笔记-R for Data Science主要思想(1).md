@@ -43,6 +43,8 @@ description:
 1. **Each variable must have its own column.**
 2. **Each ovservation must have its own row.**
 3. **Each value must have its own cell.**   
+如下图所示：
+![image](http://r4ds.had.co.nz/images/tidy-1.png)
 
 &emsp;&emsp;所谓大道至简，这里体现的淋漓尽致。Hadley在书中说:Tidy Data的定义如此的简单，有时候，你会认为是不是所有的数据都是Tidy Data，但是实在是很不幸大多数数据都不是Tidy Data，其中最重要的两个原因是：
 1. 绝大多数的人并不熟悉Tidy Data的原则。  
