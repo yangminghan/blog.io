@@ -1,6 +1,6 @@
 ---
 layout: post
-title: R学习笔记-R for Data Science主要思想（1）
+title: R学习笔记-R for Data Science主要思想（2）
 date: 2018-2-7
 categories: blog
 tags: [R]
@@ -27,8 +27,7 @@ description:
 &emsp;&emsp;要想tidy这样一个数据集，我们需要将这些列**收集**成为一个变量, 书中原文使用的是gathering这个词，我认为非常形象，就像我们把其他的变量，收集到一起一样。  
 &emsp;&emsp;为了完成这样一个操作，我们需要两个参数：  
 1. 我们需要收集到一起的变量，也就是那些代表的是值而不是变量的列，在这里，是1999和2000两列。  
-2. 收集来的变量的名称，
-
+2. 收集来的变量的名称。  
 
 
     table4a %>% gather(`1999`, `2000`,key = 'year', value = "cases")    
@@ -41,6 +40,7 @@ description:
     4 Afghanistan 2000    2666  
     5 Brazil      2000   80488  
     6 China       2000  213766  
+
 ![image](http://r4ds.had.co.nz/images/tidy-9.png)
 
 &emsp;&emsp;其实我的感觉非常像reshape2的melt和cast功能，将一个宽的数据变成一个长的数据，但是，reshape2也是Hadley大神的杰作，他在tidyverse里面没有包括reshape2，估计是做了一次自我革命，当然，plyr这个包当时也是非常惊艳，但是现在其中的很多功能被dplyr所代替。
@@ -83,6 +83,7 @@ description:
         
 &emsp;&emsp;rate这一列包含了两个变量cases和population，这样，我们需要使用separate将他重新分割成两个变量。
 ##### Separate 
+
     table3 %>%separate(rate, into = c('cases', 'population'))
             # A tibble: 6 x 4
           country      year cases  population
@@ -91,10 +92,12 @@ description:
         2 Afghanistan  2000 2666   20595360  
         3 Brazil       1999 37737  172006362 
         4 Brazil       2000 80488  174504898 
+
 ![image](http://r4ds.had.co.nz/images/tidy-17.png)
 &emsp;&emsp;separate函数非常方便，它默认使用非数字也非字母的符号进行分割，当然我们也可以指定分割符号，这里的分割符号为正则表达式：    
 
     table3 %>%separate(rate, into = c('cases', 'population'), sep = "/")
+
 &emsp;&emsp;新产生的两列数据类型为character，我们也可以通过指定convert参数进行转换：  
 
         table3 %>%separate(rate, into = c('cases', 'population'), convert = TRUE)
@@ -129,6 +132,7 @@ description:
         3 Brazil      19_99 37737/172006362  
         4 Brazil      20_00 80488/174504898   
         table5 %>% unite(new,century, year,sep = '')
+
 
 
 
