@@ -22,16 +22,11 @@ description:
 &emsp;&emsp;不管是数据是图像、音频还是基因数据，不管模型是机器学习算法，普通的统计模型还是深度学习模型，所有的数据科学研究基本上就是这样一种模式。因此，只有我们明确这种模式，在接触到一个复杂的数据科学问题的时候，才可以理出头绪，不至于茫然不知所措。  
 &emsp;&emsp;那么在这种模式下，R怎么实现这一模式中的各个模块呢，Hadley也在书中给出了很好的解答。他以**Tidyverse**为核心，给出了解决每一个模块中非常优秀的解决方案。这里，我说是非常优秀，但是，是不是最好的解决方法呢，我觉得这是一个开放性的问题，每一个数据科学任务都有自己的特殊性，有些情况下，用其他的包可能是更好的选择，但是，使用书中给出的方案，可以解决80%以上的问题。
 ## **Import**  
-&emsp;&emsp;将数据导入是所有数据科学任务的第一步。Tidyverse中集成的Import包是readr。readr这个包的语法和基础包中的import基本一样。
-```R
-library(tidyverse)  
-height <- read_csv("data/height.csv")  
-write_csv(challenge,"challenge.csv")  
-```
-       library(tidyverse)  
-           height <- read_csv("data/height.csv")  
-          write_csv(challenge,"challenge.csv")  
-       
+&emsp;&emsp;将数据导入是所有数据科学任务的第一步。Tidyverse中集成的Import包是readr。readr这个包的语法和基础包中的import基本一样。  
+
+    library(tidyverse)  
+    height <- read_csv("data/height.csv")  
+    write_csv(challenge,"challenge.csv")  
 &emsp;&emsp;readr数据导入的速度很快，而且提供了读条的功能，这对于一些比较大的数据包是非常方便的。  
 &emsp;&emsp;readr一般是从我们的文件中读入数据，和它一样，而且功能可能更强大，适用于更大数据量的包是data.table,这个包的功能我也是见识过的，一般处理的数据量的大小在几个G的规模，使用data.table就十分方便了。当我们的数据为其他格式的文件的时候：  
 &emsp;&emsp;**haven** 可以读取SPSS，Stata, SAS数据；  
