@@ -1,7 +1,7 @@
 ---
 layout: post
 title: R学习笔记-R for Data Science主要思想（3）
-date: 2018-2-9
+date: 2018-2-11
 categories: blog
 tags: [R]
 description:  
